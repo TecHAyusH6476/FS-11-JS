@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <!-- html element  -->
+    <p id="para" style="color: aqua;">External JS</p>
+
+    <div id="first">
+      <h1>This is the first heading</h1>
+      <h1>This is the second heading</h1>
+    </div>
+
+
+    <p class="first">This is second para</p>
+
+
+
+
+
+
+ <script >
+
+  // 1 get with id
+  let p = document.getElementById('first')   // first occurence  (single node)
+  console.log(p)
+  console.log(p.innerHTML)
+  p.style.backgroundColor = 'red'
+
+
+  // // 2 get with class name
+
+  // let classNode = document.getElementsByClassName('first')    // list of nodes (HTMLCollection)
+  // console.log(classNode)
+  // console.log(classNode[0].innerHTML)
+  // console.log(classNode[1].innerHTML)
+
+
+
+  // let tagNode = document.getElementsByTagName('p')  // list of nodes tag name = p
+
+  // console.log(tagNode);
+  // list/array 
+
+
+
+</script>
+</body>
+</html>
+
