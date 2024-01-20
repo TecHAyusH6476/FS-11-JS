@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 4%;
+        }
+
+        .toggle{
+            border: 1px solid rgba(52, 47, 47, 0.564);
+            background-color: rgb(218, 179, 179);
+            width: 120px;
+            height: 50px;
+            border-radius: 40px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        .circle{
+          border-radius: 50%;
+          background-color: aliceblue;
+          height: 45px;  
+          width: 45px;  
+          position: absolute;
+          top: 2px;
+        }
+
+        /* tailwind css  */
+        .left{
+            left:1px;
+        }
+        .right{
+            right: 1px;
+        }
+        .bg-black{
+         background-color: black;
+        }
+        p{
+            font-size: xx-large;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="a">
+       
+        <div class="toggle">
+             <!-- <img src="" alt=""> -->
+             <p>☀️</p>
+            <div class="circle left" onclick="fn()"></div>     
+            <!-- attribute  -->
+           <p>🌙</p>
+        </div>
+       
+    </div>
+    <script>
+        let toggle_btn = document.getElementsByClassName('circle')[0]
+        let fn = ()=>{
+            toggle_btn.classList.toggle('left')
+            toggle_btn.classList.toggle('right')
+           document.getElementById('a').classList.toggle('bg-black')
+        }
+        // toggle_btn.addEventListener('click',()=>{
+        //     toggle_btn.classList.toggle('left')
+        //     toggle_btn.classList.toggle('right')
+        //    document.getElementById('a').classList.toggle('bg-black')
+        // })
+
+        function runFn() {
+            alert("window onload is working")
+        }
+
+        runFn()
+
+
+        // window.onload  = runFn   // function assign
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #key{
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+            background-color: rgb(209, 210, 210);
+        }
+        #code{
+            color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="key">
+        Press a key : 
+    </div>
+    <p id="code">
+    
+    </p>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <script>
+        let key = document.getElementById("key")
+
+
+        key.style.color = 'red'
+        key.style.backgroundColor = 'grey'
+        let code = document.getElementById("code")
+        // keypress -> we need to check which key is press
+        // target 
+        document.addEventListener('keydown',function(event){
+
+          // edge case 
+         
+            // key name
+          let keyInfo =  `Key pressed : ${event.key}` 
+
+           // key name
+          let keyCode =  `${event.keyCode}`
+         
+          if(event.key == 'F5'){
+             event.preventDefault()    // refresh page stop
+             keyInfo =  `Key pressed : ${event.key}`
+             keyCode =  `${event.keyCode}`
+          }
+          // render on the page
+
+          key.innerText = keyInfo
+          code.innerText = keyCode
+        })
+
+    
+    </script>
+</body>
+</html>
