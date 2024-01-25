@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin: 0 auto;
+            height: 40px;
+            width: 40px;
+        }
+
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .black{
+            background-color: black;
+        }
+        .orange{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="main red">
+
+    </div>
+
+    <script>
+        const main = document.querySelector('.main')
+        let colors = ['red','blue','black','orange']
+        index = 0
+        main.addEventListener('click',()=>{
+            
+             if(index==0){
+                main.classList.toggle(colors[index])  
+                main.classList.toggle(colors[index+1])  
+             } else if(index<colors.length-1){
+                main.classList.toggle(colors[index-1]) 
+                main.classList.toggle(colors[index]) 
+             } else{
+                main.classList.toggle(colors[index]) 
+                main.classList.toggle('red') 
+             }
+
+             if(index==colors.length-1){
+                index=0
+             }else{
+                index+=1
+             }
+             
+        })
+
+
+    </script>
+</body>
+</html>
